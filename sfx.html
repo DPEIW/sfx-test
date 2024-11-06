@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Different Audio Files</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        .button-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 80px);
+            grid-gap: 15px;
+        }
+        .play-button {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            outline: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .play-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Offline SFX</h1>
+    <div class="button-grid">
+        <!-- Creating 25 buttons, each with a different audio file -->
+        <button class="play-button" onclick="playAudio('wtf-is-a-kilometer.mp3')">WTF is a kilometer?</button>
+        <button class="play-button" onclick="playAudio('vine-boom.mp3')">Vine Boom</button>
+        <button class="play-button" onclick="playAudio('why-are-you-gay_W5G134P.mp3')">Y u gey?</button>
+        <button class="play-button" onclick="playAudio('fart-with-reverb.mp3')">Reverb Fart</button>
+        <button class="play-button" onclick="playAudio('among-us-role-reveal-sound.mp3')">Amogus</button>
+        
+        <button class="play-button" onclick="playAudio('bad-to-the-bone.mp3')">Bad to the bone</button>
+        <button class="play-button" onclick="playAudio('audio7.mp3')">7</button>
+        <button class="play-button" onclick="playAudio('audio8.mp3')">8</button>
+        <button class="play-button" onclick="playAudio('audio9.mp3')">9</button>
+        <button class="play-button" onclick="playAudio('audio10.mp3')">10</button>
+        
+        <button class="play-button" onclick="playAudio('audio11.mp3')">11</button>
+        <button class="play-button" onclick="playAudio('audio12.mp3')">12</button>
+        <button class="play-button" onclick="playAudio('audio13.mp3')">13</button>
+        <button class="play-button" onclick="playAudio('audio14.mp3')">14</button>
+        <button class="play-button" onclick="playAudio('audio15.mp3')">15</button>
+        
+        <button class="play-button" onclick="playAudio('audio16.mp3')">16</button>
+        <button class="play-button" onclick="playAudio('audio17.mp3')">17</button>
+        <button class="play-button" onclick="playAudio('audio18.mp3')">18</button>
+        <button class="play-button" onclick="playAudio('audio19.mp3')">19</button>
+        <button class="play-button" onclick="playAudio('audio20.mp3')">20</button>
+        
+        <button class="play-button" onclick="playAudio('audio21.mp3')">21</button>
+        <button class="play-button" onclick="playAudio('audio22.mp3')">22</button>
+        <button class="play-button" onclick="playAudio('audio23.mp3')">23</button>
+        <button class="play-button" onclick="playAudio('audio24.mp3')">24</button>
+        <button class="play-button" onclick="playAudio('audio25.mp3')">25</button>
+    </div>
+
+    <audio id="audioPlayer"></audio>
+
+    <script>
+        function playAudio(audioFile) {
+            const audio = document.getElementById("audioPlayer");
+            audio.src = audioFile; // Set the source to the specific file
+            audio.play();
+        }
+    </script>
+</body>
+</html>
